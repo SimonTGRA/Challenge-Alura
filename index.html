@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<lang="es">
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title> Encriptador de Textos </title>
+    </head>
+
+    <body>
+    <main class="main">
+        <section class="contenido-principal">
+            <div class="contenido-texto">
+                <textarea name="text" id="text" placeholder="Inserte tu texto"></textarea>
+            </div>
+
+            <div class="contenido-botones">
+                <div class="warning">
+                    <p class="texto-warning"> Solo letaras minúsculas sin acento</p>
+                </div>
+                <div class="botones">
+                    <button class="bot enc">Encriptar</button>
+                    <button class="bot des"> Desencriptar</button>
+                </div>
+            </div> 
+        </section>
+        
+
+        <section class="contenido-carta">
+            <textarea name="texto-encriptado" id="textarea-encriptado" cols="10" rows="30" class="textarea-encriptado hidden" onkeyup="showTextarea(this.value)"></textarea>
+
+            <div class="contenedor-carta">
+                <img src="imagenes/encontrar.png" alt="Imagen de Ayuda" class="figura-carta">
+                <h2>Ningún mensaje fue encontrado</h2>
+                <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+
+            <button class="copiar">Copiar</button>
+
+        </section>
+    </main>
+
+    <footer>
+        <p> &copy; Simón Graziano Grupo 6 2024</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    </body>
+</html>

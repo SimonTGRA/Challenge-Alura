@@ -1,0 +1,233 @@
+:root {
+    --main-font: 'Inter', sans-serif;
+    --weight-300: 300; 
+    --weight-400: 400; 
+    --weight-500: 500; 
+    --weight-700: 700; 
+    --weight-900: 900; 
+    --btn-1: purple;
+    --btn-2: violet;
+    --gray-1: #545e68;
+    --gray-2: #2f3942;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--main-font);
+}
+
+body {
+    background-image: url(imagenes/fondo-body.jpg);
+    background-color: black;
+    background-blend-mode: normal;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 1rem;
+    height: 95vh;
+}
+
+.main {
+    display: grid;
+    grid-template-rows: 8fr 4fr;
+    gap: 1rem;
+    height: 100%;
+    max-width: 1280px;
+    max-height: 100vh;
+    margin: auto;
+    padding: 1rem 0;
+}
+
+.contenido-principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    align-self: flex-end;
+    width: 100%;
+    height: 100%;
+    margin-top: 4rem;
+    gap: 1rem;
+}
+
+.contenido-texto {
+    width: 100%;
+    height: 100%;
+}
+
+.contenido-texto textarea {
+    background-color: aliceblue;
+    width: 100%;
+    height: 100%;
+    resize: none;
+    outline: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--blue-1);
+    text-transform: lowercase;
+    border-radius: 10px;
+    opacity: 0.3;
+}
+
+.contenido-texto textarea::placeholder {
+    color: var(--blue-1);
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.contenido-botones {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+}
+
+.contenido-botones > * {
+    width: 100%;
+}
+
+.warning {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25px;
+    gap: 0.5rem;
+}
+
+
+
+.botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: aqua;
+}
+
+.bot {
+    background-color: transparent;
+    width: 100%;
+    padding: 1.25rem 0;
+    border: 1px solid var(--btn-1);
+    border-radius: 1.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease-in-out;
+    box-shadow: blueviolet;
+}
+
+.bot.enc {
+    background-color: var(--btn-1);
+    color: white;
+}
+
+.bot.enc:hover {
+    background-color: var(--btn-2);
+}
+
+.bot.des {
+    color: var(--btn-1);
+    transition: all 0.3s ease-in-out;
+}
+
+.bot.des:hover {
+    background-color: var(--btn-1);
+    color: white;
+}
+
+.contenido-carta {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    min-height: 100%;
+    padding: 2rem;
+    gap: 2rem;
+    background-color: white;
+    box-shadow: 0px 24px 32px -8px rgba(71, 71, 71, 0.08);
+    border-radius: 2rem;
+}
+
+.contenedor-carta {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    margin: auto;
+}
+
+.textarea-encriptado {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    resize: none;
+    outline: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--btn-1);
+    text-transform: lowercase;
+}
+
+.textarea-encriptado.hidden {
+    display: none;
+}
+
+.figura-carta {
+    display: none;
+}
+
+.copiar {
+    width: 100%;
+    padding: .75rem 0;
+    border: 1px solid var(--btn-1);
+    border-radius: 1.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    background-color: var(--btn-1);
+    color: white;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.copiar:hover {
+    background-color: var(--btn-1);
+}
+
+footer {
+    font-size: 15px;
+    width: 100%;
+    text-align: center;
+    color:rgb(11, 0, 109);
+    box-sizing: border-box;
+    flex-direction: column;
+    gap: 1.5rem;
+ }
+
+ @media screen and (min-width: 768px) {
+    .botones {
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .main {
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: none;
+    }
+
+    .contenido-principal {
+        width: 72%;
+        margin: 0 auto;
+    }
+
+    .figura-carta {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}
